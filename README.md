@@ -2,7 +2,7 @@ clinacl
 =======
 
 A command line tool for playing with the [NaCl cryptography
-library](http://nacl.cr.yp.to/), with support for [Keybase-style
+library](http://nacl.cr.yp.to/), with support for [ggggh###Keybase-style
 signatures](https://keybase.io/docs/api/1.0/sigs). This is a toy, so
 please don't feed it any private data or rely on it in production.
 
