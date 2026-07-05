@@ -5,13 +5,6 @@ set -o pipefail
 
 cd $(dirname "$BASH_SOURCE")
 
-venv_two="./venv_python2"
-if [[ ! -e "$venv_two" ]] ; then
-  echo === creating Python 2 virtualenv ===
-  virtualenv -p python2 "$venv_two"
-  (source "$venv_two/bin/activate" && pip install --editable .)
-fi
-
 venv_three="./venv_python3"
 if [[ ! -e "$venv_three" ]] ; then
   echo === creating Python 3 virtualenv ===
@@ -35,9 +28,6 @@ runtests() {
 
   echo keybase verified | clinacl keybase sign $signingkey | clinacl keybase verify
 }
-
-echo === testing Python 2 ===
-(source "$venv_two/bin/activate" && runtests)
 
 echo === testing Python 3 ===
 (source "$venv_three/bin/activate" && runtests)
